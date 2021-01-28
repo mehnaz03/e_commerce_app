@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "439448524808",
+    "project_id": "eshopping-e569f",
+    "storage_bucket": "eshopping-e569f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439448524808:android:5079b6428c971afe9dd9bd",
+        "android_client_info": {
+          "package_name": "com.mehnaz.e_commerce_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "439448524808-r9vuun1u0rdlq3ueo28fk8bmpmkvgvlc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbnnzJPfDQ3kSx6PuyyAf5kbGFqOlpHTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "439448524808-r9vuun1u0rdlq3ueo28fk8bmpmkvgvlc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
