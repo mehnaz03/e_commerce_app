@@ -1,5 +1,6 @@
 import 'package:e_commerce_app/constans.dart';
 import 'package:e_commerce_app/screens/home_page.dart';
+import 'package:e_commerce_app/screens/signup_page.dart';
 import 'package:e_commerce_app/widgets/already_have_an_account_check.dart';
 import 'package:e_commerce_app/widgets/background.dart';
 import 'package:e_commerce_app/widgets/login_body.dart';
@@ -156,7 +157,7 @@ class _LoginPageState extends State<LoginPage> {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return HomePage();
+                          return SignUp();
                         },
                       ),
                     );
