@@ -1,5 +1,6 @@
-
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:e_commerce_app/widgets/custom_action_bar.dart';
+import 'package:e_commerce_app/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 
 class HomeTab extends StatelessWidget {
@@ -30,14 +31,14 @@ class HomeTab extends StatelessWidget {
                     top: 108.0,
                     bottom: 12.0,
                   ),
-                  // children: snapshot.data.docs.map((document) {
-                  //   return ProductCard(
-                  //     title: document.data()['name'],
-                  //     imageUrl: document.data()['images'][0],
-                  //     price: "\$${document.data()['price']}",
-                  //     productId: document.id,
-                  //   );
-                  // }).toList(),
+                  children: snapshot.data.docs.map((document) {
+                    return ProductCard(
+                      title: document.data()['name'],
+                      imageUrl: document.data()['image'][0],
+                      price: "\$${document.data()['price']}",
+                      productId: document.id,
+                    );
+                  }).toList(),
                 );
               }
 

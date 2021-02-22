@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_commerce_app/constans.dart';
+import 'package:e_commerce_app/screens/cart_page.dart';
 import 'package:e_commerce_app/services/firebase_services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -74,7 +75,7 @@ class CustomActionBar extends StatelessWidget {
           GestureDetector(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(
-                // builder: (context) => CartPage(),
+                 builder: (context) => CartPage(),
               ));
             },
             child: Container(
@@ -85,8 +86,10 @@ class CustomActionBar extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8.0),
               ),
               alignment: Alignment.center,
-              child: StreamBuilder(
-                // stream: _usersRef.doc(_firebaseServices.getUserId()).collection("Cart").snapshots(),
+
+              child:
+              StreamBuilder(
+                stream: _usersRef.doc(_firebaseServices.getUserId()).collection("Cart").snapshots(),
                 builder: (context, snapshot) {
                   int _totalItems = 0;
 

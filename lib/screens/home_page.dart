@@ -1,5 +1,8 @@
 import 'package:e_commerce_app/constans.dart';
 import 'package:e_commerce_app/services/firebase_services.dart';
+import 'package:e_commerce_app/tabs/home_tab.dart';
+import 'package:e_commerce_app/tabs/saved_tab.dart';
+import 'package:e_commerce_app/tabs/search_tab.dart';
 import 'package:e_commerce_app/widgets/bottom_tabs.dart';
 import 'package:flutter/material.dart';
 
@@ -42,11 +45,11 @@ class _HomePageState extends State<HomePage> {
                   _selectedTab = num;
                 });
               },
-              // children: [
-              //   HomeTab(),
-              //   SearchTab(),
-              //   SavedTab(),
-              // ],
+              children: [
+                HomeTab(),
+                SearchTab(),
+                SavedTab(),
+              ],
             ),
           ),
           BottomTabs(
