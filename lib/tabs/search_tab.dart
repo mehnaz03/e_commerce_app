@@ -1,4 +1,3 @@
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_commerce_app/constans.dart';
 import 'package:e_commerce_app/services/firebase_services.dart';
@@ -20,21 +19,21 @@ class _SearchTabState extends State<SearchTab> {
     return Container(
       child: Stack(
         children: [
-          if (_searchString.isEmpty)
-            Center(
-              child: Container(
-                child: Text(
-                  "Search Results",
-                  style: Constants.regularDarkText,
-                ),
-              ),
-            )
-          else
+          // if (_searchString.isEmpty)
+          //   Center(
+          //     child: Container(
+          //       child: Text(
+          //         "Search Results",
+          //         style: Constants.regularDarkText,
+          //       ),
+          //     ),
+          //   )
+          // else
             FutureBuilder<QuerySnapshot>(
               future: _firebaseServices.productsRef
-                  .orderBy("search_string")
-                  .startAt([_searchString]).endAt(
-                      ["$_searchString\uf8ff"]).get(),
+                  .orderBy("name")
+                  .startAt(['Red Shoe']).endAt(
+                  ['Red Shoe']).get(),
               builder: (context, snapshot) {
                 if (snapshot.hasError) {
                   return Scaffold(
@@ -55,7 +54,7 @@ class _SearchTabState extends State<SearchTab> {
                     children: snapshot.data.docs.map((document) {
                       return ProductCard(
                         title: document.data()['name'],
-                        imageUrl: document.data()['images'][0],
+                        imageUrl: document.data()['image'][0],
                         price: "\$${document.data()['price']}",
                         productId: document.id,
                       );
